@@ -1,0 +1,30 @@
+/* Estilos del NavBar */
+.navbar {
+  background-color: #27282d;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.brand h1 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.categories {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.categories li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.categories li a:hover {
+  text-decoration: underline;
+}

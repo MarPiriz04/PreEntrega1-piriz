@@ -1,0 +1,14 @@
+/* Estilos del ItemListContainer */
+.item-list-container {
+    padding: 2rem;
+    background-color: #fff;
+    margin: 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .item-list-container h2 {
+    color: #27282d;
+    font-size: 1.8rem;
+  }
+  
