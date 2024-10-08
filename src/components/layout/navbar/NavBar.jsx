@@ -1,26 +1,35 @@
-import CartWidget from '../../common/CartWidget/CartWidget'
-
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="py-3 shadow-sm">
-      <Container>
-        <Navbar.Brand href="#">Mi Tienda</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="#category1">Categoría 1</Nav.Link>
-            <Nav.Link href="#category2">Categoría 2</Nav.Link>
-            <Nav.Link href="#category3">Categoría 3</Nav.Link>
-          </Nav>
-          <CartWidget />
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div className="container-fluid">
+        <Link to="/" className="navbar-brand">Farmacia Veracierto</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link to="/category/analgésicos" className="nav-link">Analgésicos</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/category/suplementos" className="nav-link">Suplementos</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/category/productos de higiene" className="nav-link">Productos de Higiene</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/category/anticonceptivos" className="nav-link">Anticonceptivos</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/cart" className="nav-link">Carrito</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 };
 
 export default NavBar;
-
-

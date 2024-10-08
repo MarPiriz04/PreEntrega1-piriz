@@ -1,25 +1,14 @@
-import { FaShoppingCart } from 'react-icons/fa'; // Asegúrate de instalar react-icons
+import { FaShoppingCart } from 'react-icons/fa';
+import './CartWidget.css';
 
 const CartWidget = () => {
   return (
-    <div style={{ position: 'relative' }}>
-      <FaShoppingCart style={{ color: 'white', fontSize: '1.5em' }} />
-      <span
-        style={{
-          position: 'absolute',
-          top: '-10px',
-          right: '-15px',
-          backgroundColor: 'red',
-          borderRadius: '50%',
-          padding: '2px 6px',
-          color: 'white',
-          fontSize: '0.8em',
-        }}
-      >
-        3
-      </span>
+    <div className="cart-widget">
+      <FaShoppingCart size={24} />
+      <span className="badge bg-danger ms-2">3</span> {/* Número de productos en el carrito */}
     </div>
   );
 };
 
 export default CartWidget;
+

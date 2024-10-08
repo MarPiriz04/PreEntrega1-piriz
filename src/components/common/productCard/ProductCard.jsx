@@ -1,24 +1,33 @@
-import { Card, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-const ProductCard = ({ name, price, image }) => {
+const ProductCard = ({ name, price, stock, image, addToCart }) => {
   return (
-    <Card style={{ width: '18rem', margin: '1rem auto' }}>
-      <Card.Img variant="top" src={image} alt={name} />
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>Precio: ${price}</Card.Text>
-        <Button variant="primary">Añadir al carrito</Button>
-      </Card.Body>
-    </Card>
+    <div className="col-md-4 my-3">
+      <div className="card h-100 shadow-sm">
+        <img src={image} alt={name} className="card-img-top" />
+        <div className="card-body">
+          <h5 className="card-title">{name}</h5>
+          <p className="card-text">Precio: ${price}</p>
+          <p className="card-text">Stock disponible: {stock}</p>
+          <button 
+            className="btn btn-primary" 
+            onClick={addToCart}
+          >
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
+// Validación de PropTypes
 ProductCard.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
+  stock: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
+  addToCart: PropTypes.func.isRequired,
 };
 
 export default ProductCard;
-
